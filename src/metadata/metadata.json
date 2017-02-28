@@ -1,0 +1,59 @@
+{
+  "package": "Numverify",
+  "tagline": "Numverify API",
+  "description": "Numverify",
+  "image": "http:\/\/logo.clearbit.com\/numverify.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Numverify-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "numverify.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "validateNumber",
+      "description": "Verify the provided phone number",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Numverify",
+          "required": true
+        },
+        {
+          "name": "phoneNumber",
+          "type": "String",
+          "info": "While it is most efficient to provide phone numbers in a strictly numeric format (e.g. 441179287870), the numverify API is also capable of processing numbers containing special characters (e.g. +44 (0) 117 928 7870).",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getCountries",
+      "description": "Access a comprehensive list of supported areas, including country names and dialling codes.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Numverify",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }
+  ]
+}
